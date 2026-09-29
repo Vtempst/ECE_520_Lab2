@@ -1,5 +1,7 @@
 # ECE_520_Lab2
 
+The source file that includes all the code necessary for the lab is in the file path: axi_gpio_vitis/axi_gpio_app/src/helloworld.c
+
 ## Overview
 
 The lab introduces the Zynq SoC design flow using the Zybo Z7 board, Vivado, Vitis, and AXI GPIO peripherals.
