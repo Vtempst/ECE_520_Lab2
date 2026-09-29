@@ -1,0 +1,62 @@
+# ===================================================================
+# Vivado 2023.2 / Vitis 2023.2 project .gitignore
+# Tracks: project file, block design + IP configs, HDL wrapper,
+#         Vitis application sources, final bitstream/XSA, reports.
+# ===================================================================
+
+# ---------- Vivado generated directories ----------
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+.Xil/
+
+# Generated outputs -- ignore everything except the BD HDL wrapper,
+# which the .xpr references and is needed to reopen the project.
+*.gen/*
+!*.gen/sources_1/
+*.gen/sources_1/*
+!*.gen/sources_1/bd/
+*.gen/sources_1/bd/*
+!*.gen/sources_1/bd/axi_gpio_jb/
+*.gen/sources_1/bd/axi_gpio_jb/*
+!*.gen/sources_1/bd/axi_gpio_jb/hdl/
+
+# Incremental synthesis checkpoint
+*.srcs/utils_1/
+
+# ---------- Vivado logs / journals / temp ----------
+*.jou
+*.log
+*.str
+*.backup.*
+*.dcp
+webtalk*
+vivado_pid*.zip
+hs_err_pid*.log
+
+# ---------- PS7 init exports (regenerated from the XSA) ----------
+/ps7_init*
+
+# Superseded first-revision hardware export
+/axi_gpio_jb_wrapper.xsa
+
+# ---------- Vitis workspace ----------
+# Keep only the application source folders; everything else
+# (workspace metadata, platform/BSP builds, build outputs) is generated.
+axi_gpio_vitis/*
+!axi_gpio_vitis/axi_gpio_app/
+!axi_gpio_vitis/axi_gpio_app2/
+axi_gpio_vitis/axi_gpio_app/*
+axi_gpio_vitis/axi_gpio_app2/*
+!axi_gpio_vitis/axi_gpio_app/src/
+!axi_gpio_vitis/axi_gpio_app2/src/
+
+# ---------- OS / editor ----------
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+*.swp
+*~
